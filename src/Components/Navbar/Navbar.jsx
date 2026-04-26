@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import {
   FaHome,
   FaBook,
-  FaVideo,
+ FaInfoCircle ,
   FaUserGraduate,
   FaBars,
   FaTimes,
@@ -17,17 +17,18 @@ export default function Navbar() {
 
   const navItems = [
     { name: "Home", path: "/", icon: <FaHome /> },
-    { name: "Live Classes", path: "/live", icon: <FaVideo /> },
-    { name: "My Learning", path: "/learning", icon: <FaUserGraduate /> },
+    { name: "About", path: "/about", icon: <FaInfoCircle /> },
+    { name: "Services", path: "/services", icon: <FaUserGraduate /> },
   ];
 
   return (
     <nav className="bg-white shadow-md">
-      <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-10 py-1 flex justify-between items-center">
 
         {/* Logo */}
-        <h1 className="text-2xl font-bold text-indigo-600">EduLearn</h1>
-
+        <h1 className="text-2xl font-bold text-indigo-600 h-20 w-70">
+        <img src="https://skill.hartronservices.com/backend/web/home_new_images/hartronskilllogo.png" alt="" />
+</h1>
         {/* ================= DESKTOP MENU ================= */}
         <ul className="hidden md:flex gap-8 items-center font-medium">
 
@@ -55,7 +56,7 @@ export default function Navbar() {
               {/* ===== Teachers ===== */}
               <div className="relative group/teacher">
                 <div className="flex justify-between items-center px-4 py-2 hover:bg-indigo-50 cursor-pointer">
-                  👩‍🏫 Classes for Teachers
+                 🎓 Long Terms
                   <FaChevronRight />
                 </div>
 
@@ -80,7 +81,7 @@ export default function Navbar() {
               {/* ===== Students ===== */}
               <div className="relative group/student">
                 <div className="flex justify-between items-center px-4 py-2 hover:bg-indigo-50 cursor-pointer">
-                  🎓 Classes for Students
+                  🎓 Short Terms
                   <FaChevronRight />
                 </div>
 
